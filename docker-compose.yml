@@ -1,6 +1,6 @@
 services:
   fusionsolar-collector:
-    image: ghcr.io/depuytnl/solarfusion:latest
+    image: ghcr.io/deputynl/solarfusion:latest
     build: .
     restart: unless-stopped
     environment:
