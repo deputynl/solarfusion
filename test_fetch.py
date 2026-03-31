@@ -1,7 +1,7 @@
 import os
 from fusion_solar_py.client import FusionSolarClient
 
-FS_USER = os.environ.get("FUSIONSOLAR_USER", "deputynl")
+FS_USER = os.environ.get("FUSIONSOLAR_USER", "username")
 FS_PASSWORD = os.environ["FUSIONSOLAR_PASSWORD"]
 FS_SUBDOMAIN = os.environ.get("FUSIONSOLAR_SUBDOMAIN", "uni005eu5")
 
