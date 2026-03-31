@@ -1,0 +1,16 @@
+services:
+  fusionsolar-collector:
+    image: ghcr.io/depuytnl/solarfusion:latest
+    build: .
+    restart: unless-stopped
+    environment:
+      FUSIONSOLAR_USER: ${FUSIONSOLAR_USER}
+      FUSIONSOLAR_PASSWORD: ${FUSIONSOLAR_PASSWORD}
+      FUSIONSOLAR_SUBDOMAIN: ${FUSIONSOLAR_SUBDOMAIN:-uni005eu5}
+      MQTT_HOST: ${MQTT_HOST:-10.1.1.8}
+      MQTT_PORT: ${MQTT_PORT:-1883}
+      MQTT_USER: ${MQTT_USER:-}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:-}
+      MQTT_DISCOVERY_PREFIX: ${MQTT_DISCOVERY_PREFIX:-homeassistant}
+      MQTT_STATE_TOPIC: ${MQTT_STATE_TOPIC:-fusionsolar/state}
+      POLL_INTERVAL: ${POLL_INTERVAL:-300}
